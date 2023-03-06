@@ -8,9 +8,9 @@ class Reader{
     protected int number;
     protected String faculty;
     private String data;
-    private int phone;
+    private String phone;
 
-    Reader(String name, int number, String faculty, String data, int phone){
+    Reader(String name, int number, String faculty, String data, String phone){
         this.name = name;
         this.number = number;
         this.faculty = faculty;
@@ -35,6 +35,22 @@ class Reader{
         String books = String.join(",",book_title);
         System.out.println(this.name + " вернул книги: " + books + ".");
     }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public String getData() {
+        return data;
+    }
 }
 
 public class Main {
@@ -49,7 +65,7 @@ public class Main {
             int number = in.nextInt();
             String faculty = in.next();
             String data = in.next();
-            int phone = in.nextInt();
+            String phone = in.next();
             array_reader[i] = new Reader(name, number, faculty, data, phone);
         }
     }
