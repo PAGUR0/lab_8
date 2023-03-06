@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 class Reader{
 
-    String name;
-    int number;
-    String faculty;
-    String data;
-    int phone;
+    protected String name;
+    protected int number;
+    protected String faculty;
+    private String data;
+    private int phone;
 
     Reader(String name, int number, String faculty, String data, int phone){
         this.name = name;
@@ -35,10 +35,6 @@ class Reader{
         String books = String.join(",",book_title);
         System.out.println(this.name + " вернул книги: " + books + ".");
     }
-
-
-
-
 }
 
 public class Main {
